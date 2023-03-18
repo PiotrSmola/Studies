@@ -93,7 +93,6 @@ public class Main {
 
     public static boolean zad7(int g, int h, int j)
     {
-        System.out.println(g+","+h+","+j);
         if (g == 0 || h == 0 || j==0)
             return false;
         else if (((Math.pow(g, 2) == (Math.pow(h, 2)+Math.pow(j, 2))) || (Math.pow(h, 2) == (Math.pow(g, 2)+Math.pow(j, 2))) || (Math.pow(j, 2) == (Math.pow(h, 2)+Math.pow(g, 2)))) && (g != h) && (h != j))
