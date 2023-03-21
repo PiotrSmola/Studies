@@ -179,7 +179,7 @@ public class Kalkulator {
             System.out.println("Błędne dane, podaj poprawną liczbę");
             return;
         }
-        System.out.println("Pierwiastek z liczby "+lbPodpierwiastkowa+"jest równy: "+Math.sqrt(lbPodpierwiastkowa));
+        System.out.println("Pierwiastek z liczby "+lbPodpierwiastkowa+" jest równy: "+Math.sqrt(lbPodpierwiastkowa));
     }
 
     public static void funTryg() {
