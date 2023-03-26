@@ -55,7 +55,7 @@ public class Kalkulator {
         }//koniec while
     }
 
-    public static void Error() //coś inne niż cyfra
+    public static void Error()
     {
         System.out.println("Błędne dane, koniec programu");
         System.exit(0);
