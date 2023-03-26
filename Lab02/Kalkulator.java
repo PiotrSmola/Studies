@@ -3,7 +3,6 @@ import org.w3c.dom.ls.LSInput;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-//do zmiany: osobna metoda do wczytywania 2 liczb
 public class Kalkulator {
     public static void main(String[] args) {
     Run();
