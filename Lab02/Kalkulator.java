@@ -60,15 +60,10 @@ public class Kalkulator {
         System.out.println("Błędne dane, koniec programu");
         System.exit(0);
     }
-    public static int InputInt() {  //opcja menu
+        public static int InputInt() {  //opcja menu
         Scanner input = new Scanner(System.in);
         int liczba = 0;
-        try {
-            liczba = input.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Błędne dane, podaj poprawną liczbę");
-            input.nextLine(); //czyszczenie bufora
-        }
+        liczba = input.nextInt();
         return liczba;
     }
 
@@ -117,7 +112,7 @@ public class Kalkulator {
             return;
         }
 
-        System.out.format("Różnica liczb " + odjemna + " i " + odjemnik + " wynosi %.4f\n\n: ", (odjemna - odjemnik));
+        System.out.format("Różnica liczb " + odjemna + " i " + odjemnik + " wynosi: %.4f\n\n", (odjemna - odjemnik));
     }
 
     public static void iloczyn(){
