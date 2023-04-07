@@ -1,7 +1,7 @@
 public class zad2 {
     public static void main(String[] args) {
         int[] tablica1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        String[] tablica2 = {"This", "program", "is", "written", "in", "JAVA", "language"};
+        String[] tablica2 = {"This", "program", "is", "written", "in", "JAVA", "language"}; //odd number of items
 
         for (int i = 0; i < tablica1.length; i += 2) {
             System.out.print(tablica1[i] + " ");
