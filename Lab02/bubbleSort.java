@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class sortowanieBabelkowe {
+public class bubbleSort {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Podaj liczbę elementów do posortowania:");
+        System.out.println("Enter the number of items to sort:");
         int n = input.nextInt();
         int[] tablica = new int[n];
-        System.out.println("Podaj " +n+ " liczb do posortowania:");
+        System.out.println("Enter " +n+ " numbers to sort:");
         for (int i = 0; i < n; i++) {
             tablica[i] = input.nextInt();
         }
@@ -20,7 +20,7 @@ public class sortowanieBabelkowe {
                 }
             }
         }
-        System.out.println("Posortowane liczby:");
+        System.out.println("Sorted numbers:");
         for (int i = 0; i < n; i++) {
             System.out.print(tablica[i] + " ");
         }
