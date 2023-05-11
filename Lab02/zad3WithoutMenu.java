@@ -4,7 +4,7 @@ public class zad3BezMenu {
             Scanner in = new Scanner(System.in);
             double[] array = new double[10];
             for (int i = 0; i < 10; i++) {
-                System.out.print("Podaj 10 liczb rzeczywistych: ");
+                System.out.print("Enter 10 real numbers: ");
                 array[i] = in.nextDouble();
             }
 
@@ -12,11 +12,11 @@ public class zad3BezMenu {
             FromEndToStart(array);
             OddIndexes(array);
             EvenIndexes(array);
-            System.out.println("Koniec programu");
+            System.out.println("Program end");
         }
 
         private static void FromStartToEnd(double[] array) {
-            System.out.print("Tablica od pierwszego do ostatniego indeksu: ");
+            System.out.print("An array from first to last index: ");
             for (int i = 0; i < array.length; i++) {
                 System.out.print(array[i] + " ");
             }
@@ -24,7 +24,7 @@ public class zad3BezMenu {
         }
 
         private static void FromEndToStart(double[] array) {
-            System.out.print("Tablica od ostatniego do pierwszego indeksu: ");
+            System.out.print("Array from last to first index: ");
             for (int i = array.length - 1; i >= 0; i--) {
                 System.out.print(array[i] + " ");
             }
@@ -32,7 +32,7 @@ public class zad3BezMenu {
         }
 
         private static void OddIndexes(double[] array) {
-            System.out.print("Elementy tablicy o nieparzystych indeksach: ");
+            System.out.print("Array elements with odd indexes: ");
             for (int i = 1; i < array.length; i += 2) {
                 System.out.print(array[i] + " ");
             }
@@ -40,7 +40,7 @@ public class zad3BezMenu {
         }
 
         private static void EvenIndexes(double[] array) {
-            System.out.print("Elementy tablicy o parzystych indeksach: ");
+            System.out.print("Array elements with even indexes: ");
             for (int i = 0; i < array.length; i += 2) {
                 System.out.print(array[i] + " ");
             }
