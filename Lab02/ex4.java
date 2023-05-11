@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class zad4 {
+public class ex4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] tablica = new int[10];
