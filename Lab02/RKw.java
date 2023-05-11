@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class RKw {
     public static void main(String[] args) {
-        System.out.println("Podaj a, b i c: ");
+        System.out.println("Enter a, b and c: ");
         double a = InputDouble();
         double b = InputDouble();
         double c = InputDouble();
         if (a!=0) RozKw(a,b,c);
-        else System.out.println("To nie jest równanie kwadratowe");
+        else System.out.println("This is not a quadratic equation");
 
     }
 
@@ -19,8 +19,8 @@ public class RKw {
 
     public static void RozKw(double a, double b, double c) {
         double delta = Math.pow(b,2) - (4*a*c);
-        if (delta < 0) System.out.println("Brak rozwiązań w zbiorze R");
-        else if (delta == 0) System.out.println("Jedno rozwiązanie: "+ (-b/(2*a)));
-        else System.out.println("Dwa rozwiązania: x1 = "+ (-b - Math.sqrt(delta))/(2*a) + "\tx2 = " + (-b + Math.sqrt(delta))/(2*a));
+        if (delta < 0) System.out.println("There are no solutions in the set R");
+        else if (delta == 0) System.out.println("One solution: "+ (-b/(2*a)));
+        else System.out.println("Two solutions: x1 = "+ (-b - Math.sqrt(delta))/(2*a) + "\tx2 = " + (-b + Math.sqrt(delta))/(2*a));
     }
 }
