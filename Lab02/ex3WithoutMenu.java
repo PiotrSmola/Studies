@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class zad3WithoutMenu {
+public class ex3WithoutMenu {
         public static void main(String[] args) {
             Scanner in = new Scanner(System.in);
             double[] array = new double[10];
