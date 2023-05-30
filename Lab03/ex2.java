@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class zad2 {
+public class ex2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[] liczby = new int[10];
-        int iloscDodatnich = 0;
-        int iloscUjemnych = 0;
-        int sumaDodatnich = 0;
-        int sumaUjemnych = 0;
+        int[] numbers = new int[10];
+        int numOfPositives = 0;
+        int numOfNegatives = 0;
+        int sumOfPositives = 0;
+        int sumOfNegatives = 0;
 
         for (int i = 0; i < 10; i++) {
             System.out.print("Podaj "+(i+1)+" liczbę: ");
