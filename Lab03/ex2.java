@@ -10,15 +10,15 @@ public class ex2 {
         int sumOfNegatives = 0;
 
         for (int i = 0; i < 10; i++) {
-            System.out.print("Podaj "+(i+1)+" liczbę: ");
+            System.out.print("Enter "+(i+1)+" number: ");
             liczby[i] = in.nextInt();
 
-            if (liczby[i] > 0) {
-                iloscDodatnich++;
-                sumaDodatnich += liczby[i];
-            } else if (liczby[i] < 0) {
-                iloscUjemnych++;
-                sumaUjemnych += liczby[i];
+            if (numbers[i] > 0) {
+                numOfPositives++;
+                sumOfPositives += numbers[i];
+            } else if (numbers[i] < 0) {
+                numOfNegatives++;
+                sumOfNegatives += numbers[i];
             }
         }
 
