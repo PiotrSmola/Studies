@@ -22,9 +22,9 @@ public class ex2 {
             }
         }
 
-        System.out.println("Ilość liczb dodatnich: "+iloscDodatnich);
-        System.out.println("Suma liczb dodatnich: "+sumaDodatnich);
-        System.out.println("Ilość liczb ujemnych: "+iloscUjemnych);
-        System.out.println("Suma liczb ujemnych: "+sumaUjemnych);
+        System.out.println("Number of positive numbers: "+numOfPositives);
+        System.out.println("Sum of positive numbers: "+sumOfPositives);
+        System.out.println("Number of negative numbers: "+numOfNegatives);
+        System.out.println("Sum of negative numbers: "+sumOfNegatives);
     }
 }
