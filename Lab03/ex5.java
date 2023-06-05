@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-public class zad5 {
+public class ex5 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Podaj słowo");
+        System.out.println("Enter a word");
         String word = in.next();
 
-        if (czyPalindrom(word)) {
-            System.out.format("Słowo \"%s\" jest palindromem.",word);
+        if (isPalindrome(word)) {
+            System.out.format("The word \"%s\" is a palindrome.",word);
         } else {
-            System.out.format("Słowo \"%s\" nie jest palindromem.",word);
+            System.out.format("The word \"%s\" isn't a palindrome.",word);
         }
     }
 
-    public static boolean czyPalindrom(String word) {
+    public static boolean isPalindrome(String word) {
         String backward = "";
         for (int i = word.length()-1; i >= 0; i--) {
             backward += word.charAt(i);
