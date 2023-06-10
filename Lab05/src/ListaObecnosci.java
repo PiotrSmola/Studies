@@ -28,7 +28,7 @@ public class ListaObecnosci {
     public static void dodajObecnosc(String prowadzacy, String przedmiot, String imieNazwisko,
                                      String nrAlbumu, Date data, Time czasZalogowania,
                                      Time czasWylogowania, int dlugoscSesji) {
-        String sql = "INSERT INTO attendance (prowadzacy, nazwa_przedmiotu, imie_i_nazwisko, nr_albumu, data, czas_zalogowania, czas_wylogowania, dlugosc_sesji) " +
+        String sql = "INSERT INTO obecnosc (prowadzacy, nazwa_przedmiotu, imie_i_nazwisko, nr_albumu, data, czas_zalogowania, czas_wylogowania, dlugosc_sesji) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection polacz = getConnection();
              PreparedStatement pstmt = polacz.prepareStatement(sql)) {
