@@ -30,8 +30,8 @@ public class ListaObecnosci {
                                      Time czasWylogowania, int dlugoscSesji) {
         String sql = "INSERT INTO attendance (prowadzacy, nazwa_przedmiotu, imie_i_nazwisko, nr_albumu, data, czas_zalogowania, czas_wylogowania, dlugosc_sesji) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection polacz = getConnection();
+             PreparedStatement pstmt = polacz.prepareStatement(sql)) {
             pstmt.setString(1, prowadzacy);
             pstmt.setString(2, przedmiot);
             pstmt.setString(3, imieNazwisko);
