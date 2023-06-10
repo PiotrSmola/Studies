@@ -77,4 +77,21 @@ public static void wyswietlWszystkieObecnosci() {
             System.out.println("Wystąpił błąd podczas wyświetlania obecności: " + e.getMessage());
         }
     }
+    
+        public static void main(String[] args) {
+        stworzTabele();
+
+        // Dodawanie przykładowych obecności
+        dodajObecnosc("Jan Kowalski", "matematyka", "Wiktoria Podsiadło", "123456",
+                Date.valueOf("2023-05-10"), Time.valueOf("09:00:00"),
+                Time.valueOf("10:30:00"), 90);
+        dodajObecnosc("Kamil Zagórski", "język angielski", "Matylda Pociecha", "789012",
+                Date.valueOf("2023-05-10"), Time.valueOf("09:01:00"),
+                Time.valueOf("10:29:00"), 88);
+        dodajObecnosc("Zdzisław Ciosek", "informatyka", "Mateusz Gogola", "135790",
+                Date.valueOf("2023-05-13"), Time.valueOf("09:01:00"),
+                Time.valueOf("10:20:00"), 79);
+
+        wyswietlWszystkieObecnosci();
+    }
 }
