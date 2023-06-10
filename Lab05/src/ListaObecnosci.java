@@ -46,5 +46,35 @@ public class ListaObecnosci {
             System.out.println("Wystąpił błąd podczas dodawania obecności studenta: " + e.getMessage());
         }
     }
+public static void wyswietlWszystkieObecnosci() {
+        String sql = "SELECT * FROM obecnosc";
+        try (Connection polacz = getConnection();
+             Statement stmt = polacz.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String prowadzacy = rs.getString("prowadzacy");
+                String przedmiot = rs.getString("nazwa_przedmiotu");
+                String imieNazwisko = rs.getString("imie_i_nazwisko");
+                String nrAlbumu = rs.getString("nr_albumu");
+                Date data = rs.getDate("data");
+                Time czasZalogowania = rs.getTime("czas_zalogowania");
+                Time czasWylogowania = rs.getTime("czas_wylogowania");
+                int dlugoscSesji = rs.getInt("dlugosc_sesji");
 
+                System.out.println("ID: " + id);
+                System.out.println("Prowadzący: " + prowadzacy);
+                System.out.println("Przedmiot: " + przedmiot);
+                System.out.println("Imię i nazwisko studenta: " + imieNazwisko);
+                System.out.println("Numer albumu: " + nrAlbumu);
+                System.out.println("Data zajęć: " + data);
+                System.out.println("Czas zalogowania: " + czasZalogowania);
+                System.out.println("Czas wylogowania: " + czasWylogowania);
+                System.out.println("Długość czasu spędzonego na sesji: " + dlugoscSesji);
+                System.out.println("-----------------------------------");
+            }
+        } catch (SQLException e) {
+            System.out.println("Wystąpił błąd podczas wyświetlania obecności: " + e.getMessage());
+        }
+    }
 }
