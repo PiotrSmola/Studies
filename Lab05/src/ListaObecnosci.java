@@ -24,5 +24,27 @@ public class ListaObecnosci {
             System.out.println("Wystąpił błąd podczas tworzenia tabeli z listą obecności: " + e.getMessage());
         }
     }
+    
+    public static void dodajObecnosc(String prowadzacy, String przedmiot, String imieNazwisko,
+                                     String nrAlbumu, Date data, Time czasZalogowania,
+                                     Time czasWylogowania, int dlugoscSesji) {
+        String sql = "INSERT INTO attendance (prowadzacy, nazwa_przedmiotu, imie_i_nazwisko, nr_albumu, data, czas_zalogowania, czas_wylogowania, dlugosc_sesji) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, prowadzacy);
+            pstmt.setString(2, przedmiot);
+            pstmt.setString(3, imieNazwisko);
+            pstmt.setString(4, nrAlbumu);
+            pstmt.setDate(5, data);
+            pstmt.setTime(6, czasZalogowania);
+            pstmt.setTime(7, czasWylogowania);
+            pstmt.setInt(8, dlugoscSesji);
+            pstmt.executeUpdate();
+            System.out.println("Obecność studenta została dodana do listy");
+        } catch (SQLException e) {
+            System.out.println("Wystąpił błąd podczas dodawania obecności studenta: " + e.getMessage());
+        }
+    }
 
 }
